@@ -1,9 +1,9 @@
 <h1 align="center">
-    <img alt="Todo List" title="Todo List" src="github/logo.svg" width="300px" />
+    Todo List Moderna ✔️
 </h1>
 
 <div align="center">
-    <h3> ✨ Uma Todo List moderna e responsiva construída com TypeScript ✨ </h3>
+    <h3> ✨ Uma Todo List moderna desenvolvida com o Cursor ✨ </h3>
     <a href="https://app.horadecodar.com.br/" target="_blank">
       <img src="https://img.shields.io/static/v1?label=TreinaWeb&message=Multi-Stack&color=4c43b6&style=for-the-badge" target="_blank" alt="Hora de Codar">
     </a>
@@ -15,14 +15,13 @@
     <img src="https://img.shields.io/github/languages/count/PedroCantanhede/Cursor_Todo?color=8611d2&style=for-the-badge" alt="Linguagens">
 </div>
 
-<p align="center">
-  <img alt="Adote um Pet" src="./github/capa.png" width="100%">
-</p>
-
 # Todo List Moderna
 
 Uma aplicação Todo List moderna e responsiva desenvolvida através do Cursor para aprendizado da ferramenta utilizando as linguagens HTML, SCSS e TypeScript.
 
+<p align="center">
+  <img alt="Adote um Pet" src="./github/capa.png" width="100%">
+</p>
 
 ## Funcionalidades
 
