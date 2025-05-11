@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #f7f8fd;
+  background: #ffffff;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -32,7 +32,7 @@ body {
   font-size: 2rem;
 }
 .todo-app h1 i {
-  color: #4a90e2;
+  color: #8611d2;
   margin-left: 10px;
 }
 
@@ -63,7 +63,7 @@ body {
 
 .search-container input[type=text]:focus {
   outline: none;
-  border-color: #4a90e2;
+  border-color: #8611d2;
 }
 
 .search-container .search-icon {
@@ -77,7 +77,7 @@ body {
 }
 
 .input-section button {
-  background: #4a90e2;
+  background: #8611d2;
   color: #fff;
   border: none;
   padding: 12px 20px;
@@ -86,7 +86,7 @@ body {
   transition: background 0.3s ease;
 }
 .input-section button:hover {
-  background: rgb(34.3857142857, 117.3857142857, 214.6142857143);
+  background: rgb(103.8942731278, 13.1806167401, 162.8193832599);
 }
 
 .filters {
@@ -104,7 +104,7 @@ body {
   transition: all 0.3s ease;
 }
 .filters .filter-btn.active {
-  background: #4a90e2;
+  background: #8611d2;
   color: white;
 }
 .filters .filter-btn:hover {
@@ -158,11 +158,11 @@ body {
 }
 .categories .category-card .progress-bar.work {
   width: 60%;
-  background: linear-gradient(90deg, #ffb347 0%, #ff5858 100%);
+  background: #ff7709 !important;
 }
 .categories .category-card .progress-bar.personal {
   width: 40%;
-  background: linear-gradient(90deg, #b36bff 0%, #43cea2 100%);
+  background: #8611d2 !important;
 }
 
 #taskList {
@@ -239,16 +239,16 @@ body {
   transition: color 0.3s ease;
 }
 #taskList li .task-actions button.complete-btn {
-  color: #4a90e2;
+  color: #8611d2;
 }
 #taskList li .task-actions button.edit-btn {
-  color: #f39c12;
+  color: #bdbef7;
 }
 #taskList li .task-actions button.delete-btn {
-  color: #e74c3c;
+  color: #bdbef7;
 }
 #taskList li .task-actions button:hover {
-  opacity: 0.8;
+  color: rgb(143.5135135135, 145.2027027027, 241.4864864865);
 }
 #taskList li .edit-section {
   display: flex;
@@ -259,14 +259,14 @@ body {
 #taskList li .edit-section .edit-input {
   flex: 1;
   padding: 8px;
-  border: 2px solid #4a90e2;
+  border: 2px solid #8611d2;
   border-radius: 8px;
   font-size: 1rem;
   background: white;
 }
 #taskList li .edit-section .edit-input:focus {
   outline: none;
-  border-color: rgb(34.3857142857, 117.3857142857, 214.6142857143);
+  border-color: rgb(103.8942731278, 13.1806167401, 162.8193832599);
 }
 #taskList li .edit-section .edit-actions {
   display: flex;
@@ -312,6 +312,10 @@ body {
   opacity: 0.8;
 }
 
+.clear-completed-btn {
+  font-weight: bold;
+}
+
 #taskList li {
   background: #fff;
   color: #222;
@@ -324,8 +328,8 @@ body {
 }
 
 #taskList li .complete-btn {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   border: 2px solid #bdbef7;
   background: #fff;
@@ -333,28 +337,58 @@ body {
   align-items: center;
   justify-content: center;
   margin-right: 14px;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background 0.2s;
+  position: relative;
+  padding: 0;
 }
 
 #taskList li.pessoal .complete-btn {
-  border-color: #b36bff;
+  border-color: #8611d2;
 }
 
 #taskList li.trabalho .complete-btn {
-  border-color: #ffb347;
+  border-color: #ff7709;
+}
+
+#taskList li.outra .complete-btn {
+  border-color: #8611d2;
 }
 
 #taskList li .complete-btn i {
-  color: #bdbef7;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0;
+  transition: color 0.2s, opacity 0.2s;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-#taskList li.pessoal .complete-btn i {
-  color: #b36bff;
+#taskList li.completed .complete-btn {
+  background: #bdbef7;
 }
 
-#taskList li.trabalho .complete-btn i {
-  color: #ffb347;
+#taskList li.pessoal.completed .complete-btn {
+  background: #8611d2;
+  border-color: #8611d2;
+}
+
+#taskList li.trabalho.completed .complete-btn {
+  background: #ff7709;
+  border-color: #ff7709;
+}
+
+#taskList li.outra.completed .complete-btn {
+  background: #8611d2;
+  border-color: #8611d2;
+}
+
+#taskList li.completed .complete-btn i {
+  opacity: 1;
 }
 
 #taskList li.completed .task-title {
@@ -419,7 +453,7 @@ body {
 .modal h2 {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #4a90e2;
+  color: #8611d2;
   margin-bottom: 8px;
   text-align: left;
 }
@@ -450,7 +484,7 @@ body {
 .form-group input[type=text]:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #4a90e2;
+  border-color: #8611d2;
 }
 
 .category-options {
@@ -489,12 +523,12 @@ body {
 }
 
 .modal-actions button.primary {
-  background: #4a90e2;
+  background: #8611d2;
   color: #fff;
 }
 
 .modal-actions button:hover {
-  background: #4a90e2;
+  background: #8611d2;
   color: #fff;
 }
 
@@ -537,6 +571,30 @@ body {
 
 .todo-app, .categories .category-card, #taskList li {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar.work {
+  background: #ff7709;
+}
+
+.progress-bar.personal {
+  background: #8611d2;
+}
+
+#taskList li.pessoal .complete-btn, #taskList li.pessoal .complete-btn i {
+  border-color: #8611d2;
+}
+
+#taskList li.trabalho .complete-btn, #taskList li.trabalho .complete-btn i {
+  border-color: #ff7709;
+}
+
+#taskList li .task-actions button.edit-btn:hover {
+  color: rgb(143.5135135135, 145.2027027027, 241.4864864865);
+}
+
+#taskList li .task-actions button.delete-btn:hover {
+  color: #e74c3c;
 }
 
 /*# sourceMappingURL=main.css.map */

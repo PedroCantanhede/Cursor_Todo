@@ -218,7 +218,7 @@ class TodoList {
             li.className = (task.completed ? 'completed ' : '') + (task.categoria === 'Pessoal' ? 'pessoal' : 'trabalho');
             li.innerHTML = `
                 <button class="complete-btn">
-                    <i class="fas ${task.completed ? 'fa-check-circle' : 'fa-circle'}"></i>
+                    <i class="fas ${task.completed ? 'fa-check' : 'fa-circle'}"></i>
                 </button>
                 <span class="task-title">${task.titulo}</span>
                 <div class="task-actions">
@@ -265,32 +265,26 @@ class TodoList {
     }
 
     private openDetailModal(task: Task): void {
-        // Cria um modal simples para exibir detalhes
-        let detailModal = document.getElementById('detail-modal-overlay');
-        if (!detailModal) {
-            detailModal = document.createElement('div');
-            detailModal.id = 'detail-modal-overlay';
-            detailModal.className = 'modal-overlay';
-            detailModal.innerHTML = `
-                <div class="modal">
-                    <h2>${task.titulo}</h2>
-                    <div style="margin-bottom: 10px; color: #666;">${task.categoria}</div>
-                    <div style="margin-bottom: 18px; color: #444;">${task.descricao || '<em>Sem descrição</em>'}</div>
-                    <div class="modal-actions">
-                        <button id="detail-close">Fechar</button>
-                    </div>
+        // Sempre remove qualquer modal anterior
+        document.getElementById('detail-modal-overlay')?.remove();
+        // Cria um novo modal
+        const detailModal = document.createElement('div');
+        detailModal.id = 'detail-modal-overlay';
+        detailModal.className = 'modal-overlay';
+        detailModal.innerHTML = `
+            <div class="modal">
+                <h2>${task.titulo}</h2>
+                <div style="margin-bottom: 10px; color: #666;">${task.categoria}</div>
+                <div style="margin-bottom: 18px; color: #444;">${task.descricao || '<em>Sem descrição</em>'}</div>
+                <div class="modal-actions">
+                    <button id="detail-close">Fechar</button>
                 </div>
-            `;
-            document.body.appendChild(detailModal);
-        } else {
-            detailModal.querySelector('h2')!.textContent = task.titulo;
-            (detailModal.querySelector('div') as HTMLElement).textContent = task.categoria;
-            (detailModal.querySelectorAll('div')[1] as HTMLElement).innerHTML = task.descricao || '<em>Sem descrição</em>';
-            detailModal.style.display = 'flex';
-        }
+            </div>
+        `;
+        document.body.appendChild(detailModal);
         detailModal.style.display = 'flex';
         detailModal.querySelector('#detail-close')?.addEventListener('click', () => {
-            detailModal!.style.display = 'none';
+            detailModal.remove();
         });
     }
 }
