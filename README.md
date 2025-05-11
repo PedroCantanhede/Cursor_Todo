@@ -5,7 +5,7 @@
 <div align="center">
     <h3> ✨ Uma Todo List moderna desenvolvida com o Cursor ✨ </h3>
     <a href="https://app.horadecodar.com.br/" target="_blank">
-      <img src="https://img.shields.io/static/v1?label=TreinaWeb&message=Multi-Stack&color=4c43b6&style=for-the-badge" target="_blank" alt="Hora de Codar">
+      <img src="https://img.shields.io/static/v1?label=THoradeCodar&message=Cursor&color=ff7709&style=for-the-badge" target="_blank" alt="Hora de Codar">
     </a>
     <a href="https://github.com/PedroCantanhede" target="_blank">
       <img src="https://img.shields.io/static/v1?label=Author&message=PedroCantanhede&color=8611d2&style=for-the-badge" target="_blank" alt="Pedro Cantanhêde">
