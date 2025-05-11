@@ -1,0 +1,13 @@
+{
+    "name": "todo-list",
+    "version": "1.0.0",
+    "description": "Todo List moderna com HTML, SCSS e TypeScript",
+    "scripts": {
+        "build": "tsc && sass styles/main.scss styles/main.css",
+        "watch": "tsc -w & sass --watch styles/main.scss styles/main.css"
+    },
+    "devDependencies": {
+        "sass": "^1.69.5",
+        "typescript": "^5.3.3"
+    }
+} 
